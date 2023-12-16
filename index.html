@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <script>
+            function kaibun(){
+                let result = "";
+                let text = document.getElementById("source").value;
+                for(let i = 0;text.length > i;i++){
+                    let post = text.length - i - 1;
+                    result += text.charAt(post);
+                }
+
+                document.getElementById("result").textContent = result;
+            }
+        </script>
+    </head>
+    <body>
+        <input id="source">
+        <button onclick="kaibun()">回文</button>
+        <p id="result"></p>
+    </body>
+</html>
